@@ -41,3 +41,54 @@ Your setup should allow:
 - Seed/random variation
 
 ---
+## Week 2 — Terrain Systems and Biomes
+
+Welcome to Week 2 of the Infinite World Generator project.  
+This week builds on the terrain foundation from Week 1 and moves toward believable, layered landscapes. The focus is on turning raw procedural terrain into a biome-aware world with distinct regions, materials, and placement rules.
+
+### What You Will Learn
+- Terrain masks for mountains, valleys, and plains
+- Biome logic based on height and slope
+- Terrain texturing and material blending
+- Procedural rock placement
+- Using layered noise to create more natural terrain variation
+
+### Key Concepts
+- Perlin Noise
+- Fractal Brownian Motion (fBM)
+- Voronoi Noise
+- Domain Warping
+- Height Maps
+- Slope Detection
+- Biome Masks
+---
+### Mini Project
+Create a procedural terrain system with at least **three biomes**, for example:
+- Desert
+- Forest
+- Snow
+
+Each biome should have:
+- Distinct textures
+- Clear distribution rules
+- Matching vegetation or surface detail
+---
+### Tutorials & Resources
+
+#### Main Tutorial
+- Desert generation  
+  https://youtu.be/RQU-p7TcHWo?si=QECxDBuD0g5OKdyq
+
+#### Height masks tutorial
+- https://youtu.be/VDeHxwPz494?si=rc8NPQuWIt85yGYI
+
+#### Additional Reference
+- Better mountain generation playlist for Geometry Nodes  
+  https://youtube.com/playlist?list=PLFaEpHfMsQ2uvtFjBDGwFlTm_QrnOzslc&si=x87nhDPfXCG5O75p
+
+### Deliverable
+By the end of Week 2, you should have a terrain setup that:
+- Produces believable height variation
+- Separates terrain into biome regions
+- Uses masks and noise to drive terrain appearance
+- Supports a multi-biome procedural world foundation
