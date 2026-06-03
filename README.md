@@ -83,7 +83,7 @@ Each biome should have:
 - https://youtu.be/VDeHxwPz494?si=rc8NPQuWIt85yGYI
 
 #### Additional Reference
-- Better mountain generation playlist for Geometry Nodes  
+- Better mountain generation playlist for Geometry Nodes -
   https://youtu.be/FOMmvspCcQk?si=Gj9DcSwtfULqvsjT
 - Procedural nodes by default cube -
   https://youtube.com/playlist?list=PLFaEpHfMsQ2uvtFjBDGwFlTm_QrnOzslc&si=x87nhDPfXCG5O75p
@@ -93,3 +93,38 @@ By the end of Week 2, you should have a terrain setup that:
 - Separates terrain into biome regions
 - Uses masks and noise to drive terrain appearance
 - Supports a multi-biome procedural world foundation
+
+# Week 3 — Water, Vegetation & Scatter Systems
+
+## Main Goal
+
+This week focuses on making your procedural world feel **alive** by introducing:
+
+- Rivers and lakes  
+- Procedural tree, grass, and rock scattering  
+- Forest and vegetation zones  
+- Density masks for controlled placement  
+- Performance-friendly instancing workflows  
+
+By the end of the week, you should be able to generate a believable natural environment procedurally instead of manually placing assets.
+
+---
+
+## Resources
+
+Recommended topics/tutorials to explore:
+
+- Geometry Nodes vegetation scattering - https://youtu.be/6LMuT2hN2yw?si=8Udkesc4GlG8W9gr 
+- Procedural forests in Blender Geometry Nodes - https://youtu.be/QMWn2XbsW6A?si=FZOtcTmJTR4gRl3q
+- River generation in Geometry Nodes - https://youtu.be/KXa8z9M6bSY?si=SEpc0wb9QZ1k8qsq
+- Poisson Disk Sampling explained - https://youtu.be/flQgnCUxHlw?si=uK_3pL63gR_dTVo_ 
+- Voronoi Regions explained - https://youtu.be/I6Fen2Ac-1U?si=LHPYOUM5SSgrsIrr  
+
+---
+
+## Final Deliverables
+
+By the end of Week 3, submit:
+
+A link to your google drive containing a video and the blender file
+
