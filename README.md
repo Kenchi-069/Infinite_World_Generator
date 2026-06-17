@@ -128,3 +128,75 @@ By the end of Week 3, submit:
 
 A link to your google drive containing a video and the blender file
 
+---
+## Week 4 — Roads, Villages and Scene Polish
+
+Welcome to Week 4 of the Infinite World Generator project.
+
+This week focuses on bringing civilization into your procedural world. You'll learn how to generate roads, place settlements, distribute buildings, and polish the scene with lighting, atmosphere, and rendering techniques. By the end of the week, your world should feel like a complete environment rather than just a natural landscape.
+
+### What You Will Learn
+- Procedural road generation using curves
+- Settlement and village placement
+- Building scattering systems
+- Rule-based placement workflows
+- Scene lighting and atmosphere
+- Camera flythroughs and final rendering
+
+### Key Concepts
+- Graphs
+- Pathfinding
+- A* Algorithm
+- Voronoi Regions
+- Rule-Based Placement Systems
+
+---
+### Mini Project
+
+Create a procedural village scene that includes:
+
+- A small settlement or village
+- Roads connecting important locations
+- Procedurally scattered buildings
+- Surrounding vegetation and environmental detail
+- Atmospheric lighting and scene polish
+
+---
+### Tutorials & Resources
+
+#### Road Generation
+- Geometry Nodes Roads (Erindale)
+  https://www.youtube.com/results?search_query=erindale+geometry+nodes+road
+
+#### Pathfinding & Graphs
+- Sebastian Lague — A* Pathfinding
+  https://youtu.be/-L-WgKMFuhE
+
+- Red Blob Games — A* Introduction
+  https://www.redblobgames.com/pathfinding/a-star/introduction.html
+
+#### Settlement & Procedural Placement
+
+- Blender Secrets Geometry Nodes Tips
+  https://www.youtube.com/@BlenderSecrets
+
+#### Scene Polish & Rendering
+- Polyfjord Environment Tutorials
+  https://www.youtube.com/@Polyfjord
+
+- Ducky 3D Environment Design
+  https://www.youtube.com/@TheDucky3D
+
+---
+### Deliverable
+
+By the end of Week 4, you should have a world setup that:
+
+- Generates roads procedurally
+- Contains at least one settlement or village
+- Places buildings automatically using procedural rules
+- Integrates naturally with surrounding terrain and vegetation
+- Includes lighting, atmosphere, and a polished final render
+- Has a short camera flythrough or showcase render
+
+
