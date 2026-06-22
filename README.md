@@ -200,3 +200,222 @@ By the end of Week 4, you should have a world setup that:
 - Has a short camera flythrough or showcase render
 
 
+# Week 5 | Python Inside Blender
+
+## Overview
+
+After building procedural systems using Geometry Nodes, we now begin the second half of the course: **Python scripting inside Blender**.
+
+Geometry Nodes are excellent for creating procedural systems visually, but Python allows us to automate workflows, control procedural systems programmatically, create reusable tools, and eventually package our world generator into a Blender add-on.
+
+This week focuses on learning Python fundamentals and understanding how Blender exposes its internal systems through the **Blender Python API (`bpy`)**.
+
+---
+
+# Learning Objectives
+
+By the end of this week, students will be able to:
+
+* Understand basic Python syntax and programming concepts
+* Write and execute Python scripts inside Blender
+* Use Blender's Python API (`bpy`)
+* Create and manipulate objects programmatically
+* Access Blender data structures
+* Modify scene elements using code
+* Understand how Python complements Geometry Nodes
+* Build reusable scripts for procedural workflows
+
+---
+
+# Topics
+
+## Python Fundamentals
+
+Before working with Blender, students should understand the core building blocks of Python:
+
+* Variables and Data Types
+* Lists and Dictionaries
+* Conditional Statements
+* Loops
+* Functions
+* Modules and Imports
+* Basic File Organization
+
+Applications:
+
+* Tree generation
+* Rock generation
+* World decoration
+* Scatter systems
+
+You should understand:
+
+* Location
+* Rotation
+* Scale
+* Object Properties
+
+---
+
+# Resources
+
+## Python Fundamentals
+
+### Official Python Documentation
+
+https://docs.python.org/3/
+
+Comprehensive documentation for Python syntax, libraries, and language features.
+
+---
+
+### Python Full Course (Beginner Friendly)
+
+https://www.youtube.com/watch?v=_uQrJ0TkZlc
+
+Recommended for students with little or no programming experience.
+
+---
+
+### W3Schools Python Reference
+
+https://www.w3schools.com/python/
+
+Quick examples and syntax references.
+
+---
+
+## Blender Python API
+
+### Official Blender Python API Documentation
+
+https://docs.blender.org/api/current/
+
+The most important resource for Blender scripting.
+
+Students should become comfortable searching this documentation.
+
+---
+
+### Blender API Quickstart Guide
+
+https://docs.blender.org/api/current/info_quickstart.html
+
+Recommended first reading before writing Blender scripts.
+
+---
+
+### Blender Text Editor Documentation
+
+https://docs.blender.org/manual/en/latest/editors/text_editor.html
+
+Learn how to create, execute, and debug scripts inside Blender.
+
+---
+
+## Blender Python Tutorials
+
+### Curtis Holt
+
+https://www.youtube.com/@CurtisHolt
+
+Excellent Blender Python tutorials for beginners.
+
+---
+
+### CG Python
+
+https://www.youtube.com/@CGPython
+
+Focused on Blender automation and scripting workflows.
+
+---
+
+### Blender Secrets
+
+https://www.youtube.com/@BlenderSecrets
+
+Short practical tips and workflow improvements.
+
+---
+
+## Geometry Nodes + Python
+
+### Nodes Modifier API
+
+https://docs.blender.org/api/current/bpy.types.NodesModifier.html
+
+Reference for controlling Geometry Nodes through Python.
+
+---
+
+### Additional Search Terms
+
+Search YouTube for:
+
+```text
+Blender Python Geometry Nodes
+```
+
+```text
+Blender Python Automation
+```
+
+```text
+Blender Procedural Tools Python
+```
+
+---
+
+# Key Concepts
+
+| Concept                   | Purpose                    |
+| ------------------------- | -------------------------- |
+| Variables                 | Store information          |
+| Lists                     | Store multiple values      |
+| Loops                     | Repeat actions             |
+| Functions                 | Reusable code              |
+| bpy.data                  | Access Blender data        |
+| bpy.context               | Access current state       |
+| bpy.ops                   | Execute Blender operations |
+| Collections               | Organize generated assets  |
+| Geometry Nodes Parameters | Control procedural systems |
+
+---
+
+# Mini Project
+
+## Random Terrain Preset Generator
+
+Create a Python script that:
+
+* Generates random terrain settings
+* Controls exposed Geometry Nodes parameters
+* Creates a unique procedural world preset
+* Prints generated values to the console
+
+Example outputs:
+
+```text
+Seed: 1452
+Mountain Strength: 7.3
+Terrain Scale: 15
+Tree Density: 0.65
+```
+
+The script should produce reproducible yet varied terrain configurations.
+
+---
+
+# Deliverables
+
+You should submit:
+
+* A Python script that runs inside Blender
+* At least one generated object created through code
+* A script that modifies an existing object
+* A random terrain preset generator
+* Well-commented source code
+
+---
+
