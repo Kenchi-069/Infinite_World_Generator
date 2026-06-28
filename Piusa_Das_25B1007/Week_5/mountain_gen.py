@@ -1,5 +1,6 @@
 import bpy
 from math import pi
+import os
 
 so=bpy.data.objects.get("Mountain")
 if so is None:
@@ -239,10 +240,19 @@ tex_coord=nodes.new("ShaderNodeTexCoord")
 mapping=nodes.new("ShaderNodeMapping")
 
 #loading textures
-base_color.image = bpy.data.images.load(r"C:\Users\PIUSA DAS\OneDrive\Desktop\IITB\10_soc_inf_world\Textures\rock_face_03_4k.blend\textures\rock_face_03_diff_4k.jpg")
-roughness.image = bpy.data.images.load(r"C:\Users\PIUSA DAS\OneDrive\Desktop\IITB\10_soc_inf_world\Textures\rock_face_03_4k.blend\textures\rock_face_03_rough_4k.exr")
-displacement.image = bpy.data.images.load(r"C:\Users\PIUSA DAS\OneDrive\Desktop\IITB\10_soc_inf_world\Textures\rock_face_03_4k.blend\textures\rock_face_03_disp_4k.png")
-normal.image = bpy.data.images.load(r"C:\Users\PIUSA DAS\OneDrive\Desktop\IITB\10_soc_inf_world\Textures\rock_face_03_4k.blend\textures\rock_face_03_nor_gl_4k.exr")
+texture_dir=bpy.path.abspath("//Textures")
+base_color.image=bpy.data.images.load(
+    os.path.join(texture_dir, "rock_face_03_diff_4k.jpg")
+)
+roughness.image=bpy.data.images.load(
+    os.path.join(texture_dir, "rock_face_03_rough_4k.exr")
+)
+displacement.image=bpy.data.images.load(
+    os.path.join(texture_dir, "rock_face_03_disp_4k.png")
+)
+normal.image=bpy.data.images.load(
+    os.path.join(texture_dir, "rock_face_03_nor_gl_4k.exr")
+)
 
 #loading images in principled BSDF
 links.new(base_color.outputs["Color"], principled_bsdf.inputs["Base Color"])
