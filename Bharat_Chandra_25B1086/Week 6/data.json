@@ -1,0 +1,56 @@
+[
+  {
+    "seed": 1,
+    "chunk_x_coordinate": 2,
+    "chunk_y_coordinate": 2,
+    "mean_height": 0.29621136987695135,
+    "std_height": 0.2975693996142739,
+    "maximum_elevation": 2.0104928016662598,
+    "maximum_slope": 82.22729829073239
+  },
+  {
+    "seed": 1,
+    "chunk_x_coordinate": 5,
+    "chunk_y_coordinate": 2,
+    "mean_height": 0.9076873966975798,
+    "std_height": 1.2233553859991477,
+    "maximum_elevation": 3.696873903274536,
+    "maximum_slope": 83.3123388614736
+  },
+  {
+    "seed": 1,
+    "chunk_x_coordinate": 8,
+    "chunk_y_coordinate": 2,
+    "mean_height": 0.9771397345971036,
+    "std_height": 0.7367226089324623,
+    "maximum_elevation": 3.4612510204315186,
+    "maximum_slope": 82.63744189307677
+  },
+  {
+    "seed": 1,
+    "chunk_x_coordinate": 2,
+    "chunk_y_coordinate": 5,
+    "mean_height": 0.24699180847136257,
+    "std_height": 0.29018815030746503,
+    "maximum_elevation": 2.251640796661377,
+    "maximum_slope": 81.9117321334079
+  },
+  {
+    "seed": 1,
+    "chunk_x_coordinate": 5,
+    "chunk_y_coordinate": 5,
+    "mean_height": 0.6371091435197905,
+    "std_height": 0.4947617705071583,
+    "maximum_elevation": 2.640909194946289,
+    "maximum_slope": 82.87185785821464
+  },
+  {
+    "seed": 1,
+    "chunk_x_coordinate": 8,
+    "chunk_y_coordinate": 5,
+    "mean_height": 0.31319776282102774,
+    "std_height": 0.3257809559254035,
+    "maximum_elevation": 2.2160823345184326,
+    "maximum_slope": 82.36330112839501
+  }
+]

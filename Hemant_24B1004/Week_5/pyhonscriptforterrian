@@ -1,0 +1,201 @@
+import bpy
+import random
+
+# ==========================================================
+# WEEK 5 MINI PROJECT
+# Random Terrain Preset Generator
+# ==========================================================
+
+# ----------------------------------------------------------
+# Delete everything
+# ----------------------------------------------------------
+bpy.ops.object.select_all(action='SELECT')
+bpy.ops.object.delete(use_global=False)
+
+# Remove unused materials
+for mat in bpy.data.materials:
+    bpy.data.materials.remove(mat)
+
+# ----------------------------------------------------------
+# Random Preset
+# ----------------------------------------------------------
+seed = random.randint(1000,9999)
+terrain_size = random.uniform(12,18)
+#mountain_strength = random.uniform(1.5,4.0)
+mountain_strength = random.uniform(0.5,2.0)
+tree_density = random.uniform(0.3,0.8)
+
+random.seed(seed)
+
+print("\n========================================")
+print(" RANDOM TERRAIN PRESET ")
+print("========================================")
+print(f"Seed: {seed}")
+print(f"Terrain Scale: {terrain_size:.2f}")
+print(f"Mountain Strength: {mountain_strength:.2f}")
+print(f"Tree Density: {tree_density:.2f}")
+print("========================================")
+
+# ----------------------------------------------------------
+# Create Terrain
+# ----------------------------------------------------------
+bpy.ops.mesh.primitive_plane_add(size=terrain_size)
+terrain = bpy.context.active_object
+terrain.name = "Terrain"
+
+# Subdivide
+bpy.ops.object.mode_set(mode='EDIT')
+bpy.ops.mesh.subdivide(number_cuts=120)
+bpy.ops.object.mode_set(mode='OBJECT')
+
+# ----------------------------------------------------------
+# Noise Texture
+# ----------------------------------------------------------
+tex = bpy.data.textures.new("TerrainNoise", type='CLOUDS')
+
+# Displace Modifier
+disp = terrain.modifiers.new("Displace",'DISPLACE')
+disp.texture = tex
+disp.strength = mountain_strength
+
+# Smooth Terrain
+sub = terrain.modifiers.new("Subdivision",'SUBSURF')
+sub.levels = 2
+
+# ----------------------------------------------------------
+# Terrain Material
+# ----------------------------------------------------------
+terrain_mat = bpy.data.materials.new("Terrain")
+terrain_mat.use_nodes = True
+
+bsdf = terrain_mat.node_tree.nodes["Principled BSDF"]
+bsdf.inputs["Base Color"].default_value = (0.13,0.45,0.12,1)
+
+terrain.data.materials.append(terrain_mat)
+
+# ==========================================================
+# Create Rocks
+# ==========================================================
+
+rock_mat = bpy.data.materials.new("Rock")
+rock_mat.use_nodes = True
+rock_bsdf = rock_mat.node_tree.nodes["Principled BSDF"]
+rock_bsdf.inputs["Base Color"].default_value = (0.45,0.45,0.45,1)
+
+rock_count = random.randint(12,20)
+
+for i in range(rock_count):
+
+    bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=1)
+
+    rock = bpy.context.active_object
+    rock.name = f"Rock_{i+1}"
+
+    x = random.uniform(-terrain_size/2,terrain_size/2)
+    y = random.uniform(-terrain_size/2,terrain_size/2)
+
+    rock.location = (x,y,-0.1)
+
+    size = random.uniform(0.25,0.7)
+
+    rock.scale = (size,size,size)
+
+    rock.data.materials.append(rock_mat)
+    
+    bpy.ops.object.modifier_add(type='SUBSURF')
+rock.modifiers["Subdivision"].levels = 2
+
+# ==========================================================
+# Tree Materials
+# ==========================================================
+
+trunk_mat = bpy.data.materials.new("Trunk")
+trunk_mat.use_nodes = True
+bsdf = trunk_mat.node_tree.nodes["Principled BSDF"]
+bsdf.inputs["Base Color"].default_value = (0.36,0.20,0.07,1)
+
+leaf_mat = bpy.data.materials.new("Leaves")
+leaf_mat.use_nodes = True
+bsdf = leaf_mat.node_tree.nodes["Principled BSDF"]
+bsdf.inputs["Base Color"].default_value = (0.05,0.50,0.08,1)
+tree_scale = random.uniform(0.7,1.4)
+
+# ==========================================================
+# Create Trees
+# ==========================================================
+
+tree_count = int(tree_density*40)
+
+for i in range(tree_count):
+
+    x = random.uniform(-terrain_size/2,terrain_size/2)
+    y = random.uniform(-terrain_size/2,terrain_size/2)
+
+    # Tree Trunk
+    bpy.ops.mesh.primitive_cylinder_add(
+        radius=0.08,
+        depth=0.6,
+        location=(x,y,0.3)
+    )
+
+    trunk = bpy.context.active_object
+    trunk.name = f"TreeTrunk_{i+1}"
+    trunk.data.materials.append(trunk_mat)
+
+    # Leaves
+    bpy.ops.mesh.primitive_cone_add(
+        radius1=0.35,
+        depth=0.8,
+        location=(x,y,0.9)
+    )
+
+    leaves = bpy.context.active_object
+    leaves.name = f"TreeLeaves_{i+1}"
+    leaves.data.materials.append(leaf_mat)
+
+# ==========================================================
+# Shade Smooth
+# ==========================================================
+
+for obj in bpy.data.objects:
+    if obj.type == 'MESH':
+        bpy.context.view_layer.objects.active = obj
+        obj.select_set(True)
+        bpy.ops.object.shade_smooth()
+        obj.select_set(False)
+
+# ==========================================================
+# Sun Light
+# ==========================================================
+
+bpy.ops.object.light_add(type='SUN', location=(0,0,15))
+sun = bpy.context.active_object
+sun.data.energy = 5
+
+# ==========================================================
+# Camera
+# ==========================================================
+
+bpy.ops.object.camera_add(location=(18,-18,12))
+camera = bpy.context.active_object
+
+camera.rotation_euler = (1.1,0,0.78)
+
+bpy.context.scene.camera = camera
+
+#bpy.context.scene.render.engine = 'BLENDER_EEVEE'
+bpy.context.scene.eevee.use_gtao = True
+
+
+# ==========================================================
+# World Background
+# ==========================================================
+
+world = bpy.context.scene.world
+world.use_nodes = True
+
+bg = world.node_tree.nodes["Background"]
+bg.inputs["Color"].default_value = (0.45,0.70,1.0,1)
+
+
+print("\nScene Generated Successfully!")
