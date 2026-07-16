@@ -1,0 +1,61 @@
+{
+    "seed": 6967,
+    "chunk_size": 2,
+    "world_size": 1,
+    "chunks": {
+        "(-1, -1)": {
+            "average_height": 0.5075315139077577,
+            "minimum_height": -0.08116131275892258,
+            "maximum_height": 1.098365306854248,
+            "height_variation": 0.2496407209011874
+        },
+        "(-1, 0)": {
+            "average_height": 0.4386900568013278,
+            "minimum_height": -0.09293241053819656,
+            "maximum_height": 1.4082807302474976,
+            "height_variation": 0.340179460761844
+        },
+        "(-1, 1)": {
+            "average_height": 0.42849146182226405,
+            "minimum_height": -0.07681888341903687,
+            "maximum_height": 1.4695030450820923,
+            "height_variation": 0.40662672709239606
+        },
+        "(0, -1)": {
+            "average_height": 0.6133128902798569,
+            "minimum_height": -0.01543183159083128,
+            "maximum_height": 1.706200122833252,
+            "height_variation": 0.375503134925008
+        },
+        "(0, 0)": {
+            "average_height": 0.38197488569557153,
+            "minimum_height": -0.1583230048418045,
+            "maximum_height": 1.7271969318389893,
+            "height_variation": 0.5570153646951825
+        },
+        "(0, 1)": {
+            "average_height": -0.1335331448111712,
+            "minimum_height": -0.2845088839530945,
+            "maximum_height": 0.11621817946434021,
+            "height_variation": 0.08243345164740469
+        },
+        "(1, -1)": {
+            "average_height": -0.02643950585926771,
+            "minimum_height": -0.16956806182861328,
+            "maximum_height": 0.4390239119529724,
+            "height_variation": 0.1149749034691588
+        },
+        "(1, 0)": {
+            "average_height": 0.0034044592447439698,
+            "minimum_height": -0.17948125302791595,
+            "maximum_height": 0.751232922077179,
+            "height_variation": 0.1993039049752931
+        },
+        "(1, 1)": {
+            "average_height": 0.059456906594674834,
+            "minimum_height": -0.2841932475566864,
+            "maximum_height": 1.3711963891983032,
+            "height_variation": 0.3837096454437938
+        }
+    }
+}
