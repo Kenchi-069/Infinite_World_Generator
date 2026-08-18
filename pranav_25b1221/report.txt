@@ -1,0 +1,26 @@
+Week 1:
+  learnt about the basics of geometry nodes (primitives, set position node, shaders), perlin noise function and its uses.
+  implemented these learnings to create a terrain using a basic noise texture.
+
+Week 2:
+  learnt about height maps, voronoi noise and biome masks.
+  used these to make a terrain with multiple terrains blended using given rules.
+
+Week 3:
+  learnt how to make a river using geometry nodes, and distribute trees over terrain.
+  made river that can be drawn onto terrain and trees. 
+
+Week 4:
+  learnt about A* pathfinding and rule based placement systems.
+  Made a settlement with roads and buildings that can be randomized.
+
+Week 5:
+  learnt about the bpy library.
+  replicated week 1s results using pyhton.
+
+Week 6:
+  learnt about chunk based terrain generation and json files.
+  implemented exactly that.
+
+Week 7:
+  packaged the whole terrain generator into an add on that can be used by anyone.
